@@ -4,28 +4,44 @@
 
 @layer components {
   .navigation {
-    @apply md:static md:flex-row md:items-center fixed top-20 -right-full flex flex-col items-end gap-12 transition-all ease-in-out delay-75;
+    @apply md:static md:flex-row md:items-center md:h-fit md:p-0 md:shadow-none md:transition-none fixed z-10 top-0 -right-full h-full flex flex-col items-end gap-12 transition-all ease-in-out delay-75 bg-white px-6 py-20 shadow-xl;
+  }
+
+  .nav-ul {
+    @apply flex md:flex-row flex-col items-end gap-6 font-medium text-sm text-blue-primary;
   }
 
   .logo {
     @apply flex gap-2.5 font-medium text-2xl text-blue-primary;
   }
 
-  .main-button {
+  .blue-btn {
     @apply font-medium text-white text-sm bg-blue-secondary py-3 px-7 rounded-full;
   }
 
-  .main-header {
-    @apply flex justify-between items-center mt-7;
+  .light-btn {
+    @apply py-5 px-6 md:py-5 md:px-8 flex items-center gap-2.5 bg-blue-secondary bg-opacity-10 rounded-full text-blue-secondary text-sm font-medium;
   }
 
   .menu-btn {
-    @apply md:hidden fixed flex flex-col gap-1 justify-center right-4 w-8 z-10;
+    @apply md:hidden fixed right-4 top-7;
+  }
+
+  .main-header {
+    @apply flex justify-between items-center mt-7 mb-24;
+  }
+
+  .hero-title {
+    @apply text-4xl leading-normal sm:text-5xl sm:leading-normal md:text-6xl md:leading-normal lg:text-7xl lg:leading-normal text-blue-primary font-bold mb-8;
+  }
+
+  .hero-para {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl text-blue-primary opacity-70;
   }
 }
 
 @layer utilities {
   .nav-active {
-    @apply right-4;
+    @apply right-0;
   }
 }
